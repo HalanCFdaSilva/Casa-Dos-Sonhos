@@ -1,0 +1,5 @@
+( sem objeto e vazia) POSSIVEL OPCAO ENCHER BANHEIRA
+Você abre a torneira e agua extremamente quente começa a jorrar na banheira formando um vapor que preenche todo o banheiro. A torneira para de despejar agua sozinha quando a agua na banheira atinge uma certa altura.
+
+(sem objeto e cheia)
+Você se aproxima da banheira , olha dentro dela e tudo que encontra é água.

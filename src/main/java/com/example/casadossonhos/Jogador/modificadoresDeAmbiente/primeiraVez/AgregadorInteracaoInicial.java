@@ -26,6 +26,7 @@ public class AgregadorInteracaoInicial {
         nomesCenas.add("SalaRGB");
         nomesCenas.add("SalaMorte");
         nomesCenas.add("SalaPatosSenha");
+        nomesCenas.add("SalaVida");
         return nomesCenas;
     }
 

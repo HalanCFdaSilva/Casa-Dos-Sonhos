@@ -49,8 +49,6 @@ public class Main extends Application {
         stage.setTitle("A casa dos Sonhos");
         stage.show();
 
-        AlertaSenhaPatos alertaSenhaPatos = new AlertaSenhaPatos(new SalaPatos(new Personagem(stage)));
-        alertaSenhaPatos.show();
 
 
 
