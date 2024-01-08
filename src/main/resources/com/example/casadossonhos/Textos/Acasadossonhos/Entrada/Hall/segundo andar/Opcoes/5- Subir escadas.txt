@@ -1,0 +1,3 @@
+Verificar porta com desenho de pato
+Verificar porta simples
+Verificar a porta com leds

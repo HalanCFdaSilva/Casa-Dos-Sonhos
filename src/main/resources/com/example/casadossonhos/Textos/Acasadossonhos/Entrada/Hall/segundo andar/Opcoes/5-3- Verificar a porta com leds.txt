@@ -1,0 +1,3 @@
+ENTRAR( Pensando porque eu estou aqui)
+VOLTAR( Fechando a porta e desejando não ter de abri la de novo)
+NÃO OUVI, PODE REPETIR

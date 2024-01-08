@@ -1,0 +1,29 @@
+Um dom de estática inunda o ambiente, você começa a ter uma leve dor de cabeça que em segundos se transforma em uma enxaqueca tão intensa que sua  cabeça parece estar constantemente recebendo centenas de ferroadas. Em meio a tudo isso você começa a ter algumas visões, imagens disformes, você não consegue identificar nenhuama delas.
+(PERGUNTA)
+Você deseja manter na estação?
+(OPCOES)
+SIM
+NÃO 
+
+(NÃO)
+Você rapidamente estica a mão e aperta o primeiro botão que alcançou. Logo em seguida aquele som de estática é substituido por uma música pop, o botão que apertou foi o 95.7.
+Então você ficou parado ali, por uns 2 minutos, enquanto aguardava os efeitos cessarem e você conseguir fazer pensamentos consisos novamente.
+
+
+(SIM)
+Seu nariz começa a sangrar e sua visão fica turva, você tambem começa a sentir uma tontura. As visões ficam mais borradas, provavelmente devido a visão turva, mas ao fundo você consegue ouvir a voz de um homem dizer:
+- Pai, espero que acorde logo, seu netinho vai adorar te conhecer.
+Você tambêm não reconhece a voz do homem.
+( PERGUNTA)
+Você deseja manter na estação?
+(OPCOES)
+SIM
+NÃO 
+
+(SIM)
+Você tenta trocar de estação mas não há mais tempo, menos de 1 segundo após você descidir mudar de estacão vocé já caiu morto.
+
+(NÃO)
+Você continua a ouvir aquela estática na esperança de ouvir algo mais, mas não há tempo, logo emseguida você já cai morto no chão.
+[MORTE]
+

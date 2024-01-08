@@ -1,0 +1,3 @@
+Verificar Arvore
+Olhar a mesa
+Verificar o Totêm

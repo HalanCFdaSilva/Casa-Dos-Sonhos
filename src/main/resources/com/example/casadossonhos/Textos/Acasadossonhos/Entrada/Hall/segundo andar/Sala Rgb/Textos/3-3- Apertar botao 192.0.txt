@@ -1,0 +1,10 @@
+Você aperta o botão e a música para, em seu lugar entra o som de um bip que toca a cada 5 segundos
+
+
+( com alien te perseguindo)
+
+Você aperta o botão e em seu lugar entra o som ritmado de um bip com um intervalo de 2 segundos entre eles.
+
+( ultima vida)
+
+Você aperta o botão e a música para, em seu lugar entra o som de um bip que toca com um intervalo de meio segundo entre eles.

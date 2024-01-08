@@ -1,0 +1,3 @@
+armario - opcao ja pegou itens
+modificar sala empalhada pos urso para incluir o sumico dos vestigios da sua morte.
+Fazer urso pos vulto da janela

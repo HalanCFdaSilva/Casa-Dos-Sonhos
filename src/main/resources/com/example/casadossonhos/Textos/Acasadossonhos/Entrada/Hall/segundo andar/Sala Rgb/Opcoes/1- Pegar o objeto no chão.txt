@@ -1,0 +1,17 @@
+ALERT
+Você deseja pegar a identidade?
+1- Sim
+2- Não
+
+
+( sim/ segunda interacao) 
+Você avança mais alguns metros até que ouve mais umestalo. Novamente você para e olha para cima, outra corda arrebentou, mas a caixa de som continua lá, ameaçando cair na sua cabeça caso avançe.
+
+ALERT
+Você realmente que pegar essa identidade?
+1-Com toda certeza!
+2- Não, talvez mais tarde.
+
+( com toda certeza!/terceira interacao)
+Você avança até a identidade sem mais nenhum susto, mas quando você se abaixa para pegar a identidade você ouve mais dois estalos, e então tudo fica escuro.
+MORTE

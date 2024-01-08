@@ -1,0 +1,7 @@
+Existem quatro cadeiras em volta da mesa. A mais próxima de você está de frente para a arvore, outra a sua direita está de frente para o totem, outra a sua esquerda está de frente a uma parede sem graça e a ultima cadeira, sendo a mais distante de você, está de frente para você.
+
+[OPCOES]
+1- Sentar na cadeira mais distante
+2- Sentar na cadeira mais próxima 
+3- Sentar na cadeira há esquerda
+4- Sentar na cadeira há direita

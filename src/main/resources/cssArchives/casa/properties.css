@@ -1,0 +1,22 @@
+.root{
+    -fx-background-color: brown;
+
+}
+
+.text-area{
+    -fx-text-fill: #15ff05;
+
+}
+
+.text-area .content {
+-fx-background-color: black;
+}
+
+#texto-Opcoes{
+    -fx-text-fill: #15ff05;
+    -fx-background-color: black;
+    -fx-border-color: white;
+    -fx-border-radius: 2px;
+    -fx-padding: 3px;
+}
+
