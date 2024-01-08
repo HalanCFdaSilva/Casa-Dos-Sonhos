@@ -1,26 +1,15 @@
-package com.example.casadossonhos.casa.entrada.hall.mezanino.salaPatos;
+package com.example.casadossonhos.casa.entrada.hall.segundoAndar.salaPatos;
 
 import com.example.casadossonhos.Comandos.alerta.AlertaSenhaPatos;
 import com.example.casadossonhos.Jogador.Personagem;
 import com.example.casadossonhos.casa.Cena;
 import com.example.casadossonhos.casa.CenaAtual.CenaAtualPatos;
-import com.example.casadossonhos.casa.entrada.hall.mezanino.SegundoAndar;
+import com.example.casadossonhos.casa.entrada.hall.segundoAndar.SegundoAndar;
 
 public class SalaPatos extends Cena {
 
     public SalaPatos(Personagem personagem) {
         super(personagem);
-
-
-
-    }
-
-    @Override
-    public void start() throws Exception {
-
-        super.start();
-        this.getPersonagem().setCenaAtual(CenaAtualPatos.SALA_PATOS);
-
     }
 
     @Override
@@ -53,7 +42,8 @@ public class SalaPatos extends Cena {
     }
 
     @Override
-    public void setCenaAnterior() {
-        this.setCenaAnterior(new SegundoAndar(this.getPersonagem()));
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualPatos.SALA_PATOS);
     }
+
 }

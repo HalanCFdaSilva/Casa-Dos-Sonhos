@@ -1,16 +1,12 @@
 package com.example.casadossonhos;
 
-import com.example.casadossonhos.Comandos.alerta.AlertaSenhaPatos;
-import com.example.casadossonhos.Comandos.alerta.AlertaSintonizadorRadio;
 import com.example.casadossonhos.Jogador.Personagem;
 import com.example.casadossonhos.casa.entrada.cenas.Entrada;
-import com.example.casadossonhos.casa.entrada.hall.mezanino.salaPatos.SalaPatos;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import java.io.FileNotFoundException;
 
 
 public class Main extends Application {
@@ -49,8 +45,7 @@ public class Main extends Application {
         stage.setTitle("A casa dos Sonhos");
         stage.show();
 
-        AlertaSenhaPatos alertaSenhaPatos = new AlertaSenhaPatos(new SalaPatos(new Personagem(stage)));
-        alertaSenhaPatos.show();
+
 
 
 

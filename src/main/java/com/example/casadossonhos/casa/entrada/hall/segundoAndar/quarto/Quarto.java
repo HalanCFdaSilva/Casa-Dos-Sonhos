@@ -1,18 +1,16 @@
-package com.example.casadossonhos.casa.entrada.hall.mezanino.quarto;
+package com.example.casadossonhos.casa.entrada.hall.segundoAndar.quarto;
 
 import com.example.casadossonhos.Jogador.Personagem;
 import com.example.casadossonhos.casa.Cena;
 import com.example.casadossonhos.casa.CenaAtual.CenaAtualQuarto;
-import com.example.casadossonhos.casa.entrada.hall.mezanino.SegundoAndar;
-import com.example.casadossonhos.casa.entrada.hall.mezanino.quarto.banheiro.Banheiro;
+import com.example.casadossonhos.casa.entrada.hall.segundoAndar.SegundoAndar;
+import com.example.casadossonhos.casa.entrada.hall.segundoAndar.quarto.banheiro.Banheiro;
 
 public class Quarto extends Cena {
     public Quarto(Personagem personagem) {
         super(personagem);
-
-
-
     }
+
 
     @Override
     public void guardarEnderecoTexto() {
@@ -36,13 +34,6 @@ public class Quarto extends Cena {
 
         }
     }
-
-    @Override
-    public void start() throws Exception {
-        super.start();
-        this.getPersonagem().setCenaAtual(CenaAtualQuarto.QUARTO);
-    }
-
     @Override
     public void aoClicarBotao() {
         super.aoClicarBotao();
@@ -59,9 +50,10 @@ public class Quarto extends Cena {
     }
 
     @Override
-    public void setCenaAnterior() {
-        this.setCenaAnterior(new SegundoAndar(this.getPersonagem()));
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualQuarto.QUARTO);
     }
+
 }
 
 

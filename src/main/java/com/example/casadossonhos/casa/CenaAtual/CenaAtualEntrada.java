@@ -1,5 +1,8 @@
 package com.example.casadossonhos.casa.CenaAtual;
 
+import com.example.casadossonhos.Jogador.Personagem;
+import com.example.casadossonhos.casa.Cena;
+
 public enum CenaAtualEntrada implements CenaAtual {
 
     BATER_A_PORTA,
@@ -10,4 +13,18 @@ public enum CenaAtualEntrada implements CenaAtual {
     IR_EMBORA,
     OLHAR_JANELA,
     SE_APROXIMAR_DA_CASA;
+
+    @Override
+    public Cena cenaAnterior(Personagem personagem) {
+        return null;
+    }
+
+    @Override
+    public String modificadorAmbienteTexto(Personagem personagem, String enderecoTexto) {
+        switch ((CenaAtualEntrada) personagem.getCenaAtual()){
+
+            default: return enderecoTexto;
+
+        }
+    }
 }

@@ -2,7 +2,6 @@ package com.example.casadossonhos.Comandos.alerta.Checador;
 
 import com.example.casadossonhos.Comandos.alerta.AlertaSystemShock;
 import com.example.casadossonhos.casa.Cena;
-import com.example.casadossonhos.casa.entrada.hall.mezanino.salaPatos.SalaPatos;
 
 public class ChecadorSenhaPatos {
     private final String senhaDigitada;

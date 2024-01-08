@@ -1,13 +1,18 @@
 package com.example.casadossonhos.casa;
 
+import com.example.casadossonhos.Jogador.Personagem;
+import com.example.casadossonhos.casa.CenaAtual.CenaAtual;
+
 public class GuardadorEnderecoTextos {
 
+    private Personagem personagem;
     private String enderecoBase;
     private String enderecoTexto;
     private String enderecoAcoes;
 
-    public GuardadorEnderecoTextos() {
+    public GuardadorEnderecoTextos(Personagem personagem) {
         this.enderecoBase = "src/main/resources/com/example/casadossonhos/Textos/Acasadossonhos/Entrada/";
+        this.personagem = personagem;
     }
 
     private String getEnderecoBase() {
@@ -19,7 +24,7 @@ public class GuardadorEnderecoTextos {
     }
 
     public void setEnderecoTexto(java.lang.String enderecoTexto) {
-        this.enderecoTexto = enderecoTexto;
+        this.enderecoTexto = this.personagem.getCenaAtual().modificadorAmbienteTexto(personagem,enderecoTexto);
     }
 
     public String getEnderecoAcoes() {

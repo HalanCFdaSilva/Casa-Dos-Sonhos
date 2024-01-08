@@ -9,11 +9,6 @@ public class Gaveta2 extends Cena {
         super(personagem);
     }
 
-    @Override
-    public void start() throws Exception {
-        super.start();
-        this.getPersonagem().setCenaAtual(CenaAtualHall.GAVETA2);
-    }
 
     @Override
     public void guardarEnderecoTexto() {
@@ -28,7 +23,9 @@ public class Gaveta2 extends Cena {
     }
 
     @Override
-    public void setCenaAnterior() {
-        this.setCenaAnterior(new ArmarioHall(getPersonagem()));
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualHall.GAVETA2);
     }
+
+
 }

@@ -1,9 +1,9 @@
-package com.example.casadossonhos.casa.entrada.hall.mezanino.salaRGB;
+package com.example.casadossonhos.casa.entrada.hall.segundoAndar.salaRGB;
 
 import com.example.casadossonhos.Jogador.Personagem;
 import com.example.casadossonhos.casa.Cena;
 import com.example.casadossonhos.casa.CenaAtual.CenaAtualRGB;
-import com.example.casadossonhos.casa.entrada.hall.mezanino.SegundoAndar;
+import com.example.casadossonhos.casa.entrada.hall.segundoAndar.SegundoAndar;
 
 public class SalaRGB extends Cena {
     public SalaRGB(Personagem personagem) {
@@ -11,14 +11,6 @@ public class SalaRGB extends Cena {
 
     }
 
-    @Override
-    public void start() throws Exception {
-
-        super.start();
-        this.getPersonagem().setCenaAtual(CenaAtualRGB.SALA_RGB);
-
-
-    }
 
     @Override
     public void guardarEnderecoTexto() {
@@ -34,12 +26,12 @@ public class SalaRGB extends Cena {
     @Override
     public void aoClicarBotao() {
         super.aoClicarBotao();
-        System.out.println(getPersonagem());
         if(this.getPersonagem().getInteracoes().getInteracao("SalaRGB").isPrimeiraVez()){
 
             botoes.entrou("SalaRGB","ENTRAR( Pensando porque eu estou aqui)").
                     funcaoBotao(new SalaRGB(this.getPersonagem()),
                             "ENTRAR( Pensando porque eu estou aqui)");
+
             botoes.funcaoBotao(new SegundoAndar(this.getPersonagem()),
                     "VOLTAR( Fechando a porta e desejando não ter de abri la de novo)");
 
@@ -48,9 +40,26 @@ public class SalaRGB extends Cena {
             botoes.desativarVoltar(this.pane);
         } else {
 
+            if (!this.getPersonagem().getInventario().isPegouItem("extintor")){
+                botoes.funcaoBotao(new VerificarObjetoNoChão(this.getPersonagem()),"Pegar o objeto no chão");
+            }
+
+
+            if (!this.getPersonagem().getInventario().isPegouItem("extintor")){
+                botoes.funcaoBotao(new PegarExtintor(this.getPersonagem()),"Pegar o extintor");
+            }
+
+
+            botoes.funcaoBotao(new VerificarRadio(this.getPersonagem()),"Verificar o rádio");
+
 
         }
 
 
+    }
+
+    @Override
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualRGB.SALA_RGB);
     }
 }

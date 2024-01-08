@@ -10,14 +10,13 @@ public class VerificarTotem extends Cena {
     }
 
     @Override
-    public void start() throws Exception {
-        super.start();
-        this.getPersonagem().setCenaAtual(CenaAtualFlores.VERIFICAR_TOTEM);
-    }
-
-    @Override
     public void guardarEnderecoTexto() {
 
 
+    }
+
+    @Override
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualFlores.VERIFICAR_TOTEM);
     }
 }

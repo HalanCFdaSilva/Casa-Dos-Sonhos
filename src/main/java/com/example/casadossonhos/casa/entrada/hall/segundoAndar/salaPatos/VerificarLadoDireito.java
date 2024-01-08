@@ -1,4 +1,4 @@
-package com.example.casadossonhos.casa.entrada.hall.mezanino.salaPatos;
+package com.example.casadossonhos.casa.entrada.hall.segundoAndar.salaPatos;
 
 import com.example.casadossonhos.Jogador.Personagem;
 import com.example.casadossonhos.casa.Cena;
@@ -7,14 +7,8 @@ import com.example.casadossonhos.casa.CenaAtual.CenaAtualPatos;
 public class VerificarLadoDireito extends Cena {
     public VerificarLadoDireito(Personagem personagem) {
         super(personagem);
-
     }
 
-    @Override
-    public void start() throws Exception {
-        super.start();
-        this.getPersonagem().setCenaAtual(CenaAtualPatos.LADO_DIREITO);
-    }
 
     @Override
     public void guardarEnderecoTexto() {
@@ -38,7 +32,9 @@ public class VerificarLadoDireito extends Cena {
     }
 
     @Override
-    public void setCenaAnterior() {
-        this.setCenaAnterior(new SalaPatos(this.getPersonagem()));
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualPatos.LADO_DIREITO);
     }
+
+
 }

@@ -1,5 +1,6 @@
-package com.example.casadossonhos.casa.entrada.hall.mezanino.quarto;
+package com.example.casadossonhos.casa.entrada.hall.segundoAndar.quarto;
 
+import com.example.casadossonhos.Comandos.alerta.QuebrarGloboDeNeve;
 import com.example.casadossonhos.Jogador.Personagem;
 import com.example.casadossonhos.casa.Cena;
 import com.example.casadossonhos.casa.CenaAtual.CenaAtualQuarto;
@@ -7,18 +8,8 @@ import com.example.casadossonhos.casa.CenaAtual.CenaAtualQuarto;
 public class ArmarioQuarto extends Cena {
     public ArmarioQuarto(Personagem personagem) {
         super(personagem);
-
-
-
-
     }
 
-    @Override
-    public void start() throws Exception {
-        super.start();
-        this.getPersonagem().setCenaAtual(CenaAtualQuarto.ARMARIO_QUARTO);
-
-    }
 
     @Override
     public void guardarEnderecoTexto() {
@@ -45,7 +36,7 @@ public class ArmarioQuarto extends Cena {
             botoes.funcaoBotao(new ArmarioQuarto(this.getPersonagem()),
                     "Sacudir o globo de neve");
 
-            botoes.funcaoBotao(new QuebrarGloboDeNeve(this.getPersonagem()),
+            botoes.criaAlerta(new QuebrarGloboDeNeve(new ArmarioQuarto(this.getPersonagem())),
                     "Quebrar o globo de neve");
 
             botoes.pegarItem("Globo de neve","guardar o globo de neve").
@@ -59,7 +50,8 @@ public class ArmarioQuarto extends Cena {
     }
 
     @Override
-    public void setCenaAnterior() {
-        this.setCenaAnterior(new Quarto(this.getPersonagem()));
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualQuarto.ARMARIO_QUARTO);
     }
+
 }

@@ -1,4 +1,4 @@
-package com.example.casadossonhos.casa.entrada.hall.mezanino.salaRGB;
+package com.example.casadossonhos.casa.entrada.hall.segundoAndar.salaRGB;
 
 import com.example.casadossonhos.Jogador.Personagem;
 import com.example.casadossonhos.casa.Cena;
@@ -12,8 +12,9 @@ public class VerificarRadio extends Cena {
 
     @Override
     public void start() throws Exception {
+
         super.start();
-        this.getPersonagem().setCenaAtual(CenaAtualRGB.RADIO);
+
     }
 
     @Override
@@ -24,5 +25,10 @@ public class VerificarRadio extends Cena {
     @Override
     public void aoClicarBotao() {
         super.aoClicarBotao();
+    }
+
+    @Override
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualRGB.RADIO);
     }
 }

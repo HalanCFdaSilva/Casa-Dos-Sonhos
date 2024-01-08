@@ -1,4 +1,4 @@
-package com.example.casadossonhos.casa.entrada.hall.mezanino.salaPatos;
+package com.example.casadossonhos.casa.entrada.hall.segundoAndar.salaPatos;
 
 import com.example.casadossonhos.Jogador.Personagem;
 import com.example.casadossonhos.casa.Cena;
@@ -10,12 +10,6 @@ public class OlharGavetaSalaPatos extends Cena {
 
     }
 
-    @Override
-    public void start() throws Exception {
-        super.start();
-        this.getPersonagem().setCenaAtual(CenaAtualPatos.OLHAR_GAVETA);
-
-    }
 
     @Override
     public void guardarEnderecoTexto() {
@@ -40,7 +34,7 @@ public class OlharGavetaSalaPatos extends Cena {
     }
 
     @Override
-    public void setCenaAnterior() {
-        this.setCenaAnterior(new VerificarLadoDireito(this.getPersonagem()));
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualPatos.OLHAR_GAVETA);
     }
 }

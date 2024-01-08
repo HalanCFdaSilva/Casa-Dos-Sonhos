@@ -3,10 +3,9 @@ package com.example.casadossonhos.casa.entrada.hall.cenas;
 import com.example.casadossonhos.Jogador.Personagem;
 import com.example.casadossonhos.casa.Cena;
 import com.example.casadossonhos.casa.CenaAtual.CenaAtualHall;
-import com.example.casadossonhos.casa.entrada.hall.mezanino.SegundoAndar;
+import com.example.casadossonhos.casa.entrada.hall.segundoAndar.SegundoAndar;
 import com.example.casadossonhos.casa.entrada.hall.salaEmpalhada.SalaEmpalhada;
 import com.example.casadossonhos.casa.entrada.hall.salaFlores.SalaFlores;
-import javafx.stage.Stage;
 
 public class Hall extends Cena {
     public Hall(Personagem personagem) {
@@ -16,13 +15,6 @@ public class Hall extends Cena {
     }
 
 
-
-    @Override
-    public void start() throws Exception {
-        this.getPersonagem().setCenaAtual(CenaAtualHall.HALL);
-        super.start();
-
-    }
 
     @Override
     public void guardarEnderecoTexto() {
@@ -40,6 +32,11 @@ public class Hall extends Cena {
         botoes.funcaoBotao(new SegundoAndar(this.getPersonagem()), "Subir escadas");
         botoes.funcaoBotao(new IrEmboraHall(this.getPersonagem()), "Ir embora");
         botoes.desativarVoltar(this.pane);
+    }
+
+    @Override
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualHall.HALL);
     }
 
 

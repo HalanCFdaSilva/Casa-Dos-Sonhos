@@ -6,5 +6,6 @@ public interface CenaService {
 
     public void aoClicarBotao();
 
-    public void setCenaAnterior();
+    public void cenaAtual();
+
 }

@@ -13,13 +13,6 @@ public class SalaEmpalhada extends Cena {
 
 
     @Override
-    public void start() throws Exception {
-        super.start();
-        this.getPersonagem().setCenaAtual(CenaAtualEmpalhada.SALA_EMPALHADA);
-
-    }
-
-    @Override
     public void guardarEnderecoTexto() {
         if (this.getPersonagem().getEventos().find("Morte urso").isAtivo()){
             this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Empalhada/Textos/" +
@@ -52,7 +45,9 @@ public class SalaEmpalhada extends Cena {
     }
 
     @Override
-    public void setCenaAnterior() {
-        this.setCenaAnterior(new Hall(this.getPersonagem()));
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualEmpalhada.SALA_EMPALHADA);
     }
+
+
 }

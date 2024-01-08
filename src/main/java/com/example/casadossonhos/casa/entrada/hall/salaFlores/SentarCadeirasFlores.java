@@ -8,16 +8,8 @@ import com.example.casadossonhos.casa.entrada.cenas.OlharJanela;
 public class SentarCadeirasFlores extends Cena {
     public SentarCadeirasFlores(Personagem personagem) {
         super(personagem);
-
     }
 
-    @Override
-    public void start() throws Exception {
-        super.start();
-        this.getPersonagem().setCenaAtual(CenaAtualFlores.SENTAR_CADEIRA_FLORES);
-
-
-    }
 
     @Override
     public void guardarEnderecoTexto() {
@@ -32,7 +24,7 @@ public class SentarCadeirasFlores extends Cena {
     }
 
     @Override
-    public void setCenaAnterior() {
-        this.setCenaAnterior(new OlharMesaSalaFlores(this.getPersonagem()));
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualFlores.SENTAR_CADEIRA_FLORES);
     }
 }

@@ -9,15 +9,10 @@ public class EsperarUmPouco extends Cena {
     public EsperarUmPouco(Personagem personagem) {
         super(personagem);
 
-        this.getPersonagem().setCenaAtual(CenaAtualEntrada.ESPERAR_UM_POUCO);
+
 
     }
 
-    @Override
-    public void start() throws Exception {
-        super.start();
-
-    }
 
     @Override
     public void guardarEnderecoTexto() {
@@ -32,6 +27,11 @@ public class EsperarUmPouco extends Cena {
         botoes.funcaoBotao(new ChamarPorAlguem(this.getPersonagem()), "Chamar por alguêm");
         botoes.funcaoBotao(new IrEmbora(this.getPersonagem()),"Ir embora");
         botoes.desativarVoltar(this.pane);
+    }
+
+    @Override
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualEntrada.ESPERAR_UM_POUCO);
     }
 
 }

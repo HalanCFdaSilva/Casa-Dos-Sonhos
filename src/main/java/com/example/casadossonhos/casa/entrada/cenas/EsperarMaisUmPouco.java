@@ -8,14 +8,11 @@ import com.example.casadossonhos.casa.entrada.hall.cenas.Hall;
 public class EsperarMaisUmPouco extends Cena {
     public EsperarMaisUmPouco(Personagem personagem) {
         super(personagem);
-        this.getPersonagem().setCenaAtual(CenaAtualEntrada.ESPERAR_MAIS_UM_POUCO);
+
 
     }
 
-    @Override
-    public void start() throws Exception {
-        super.start();
-    }
+
 
     @Override
     public void guardarEnderecoTexto() {
@@ -28,6 +25,11 @@ public class EsperarMaisUmPouco extends Cena {
         super.aoClicarBotao();
         botoes.funcaoBotao(new Hall(this.getPersonagem()),"Entrar na casa");
         botoes.desativarVoltar(this.pane);
+    }
+
+    @Override
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualEntrada.ESPERAR_MAIS_UM_POUCO);
     }
 
 

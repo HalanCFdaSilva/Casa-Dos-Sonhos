@@ -10,11 +10,7 @@ public class ChamarPorAlguem extends Cena {
         super(personagem);
     }
 
-    @Override
-    public void start() throws Exception {
-        this.getPersonagem().setCenaAtual(CenaAtualEntrada.CHAMAR_POR_ALGUEM);
-        super.start();
-    }
+
 
     @Override
     public void guardarEnderecoTexto() {
@@ -33,7 +29,9 @@ public class ChamarPorAlguem extends Cena {
     }
 
     @Override
-    public void setCenaAnterior() {
-        this.setCenaAnterior(new EsperarUmPouco(getPersonagem()));
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualEntrada.CHAMAR_POR_ALGUEM);
     }
+
+
 }

@@ -10,21 +10,9 @@ public class SeAproximarDaCasa extends Cena {
     public SeAproximarDaCasa(Personagem personagem) {
         super(personagem);
 
-        this.getPersonagem().setCenaAtual(CenaAtualEntrada.SE_APROXIMAR_DA_CASA);
-
-
     }
 
 
-    @Override
-    public void start() throws Exception {
-
-        super.start();
-
-
-
-
-    }
 
     @Override
     public void guardarEnderecoTexto() {
@@ -39,6 +27,11 @@ public class SeAproximarDaCasa extends Cena {
         botoes.funcaoBotao(new BaterAPorta(this.getPersonagem()), "Bater a porta");
         botoes.funcaoBotao(new IrEmbora(this.getPersonagem()), "Ir embora");
         botoes.desativarVoltar(this.pane);
+    }
+
+    @Override
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualEntrada.SE_APROXIMAR_DA_CASA);
     }
 
 

@@ -11,8 +11,9 @@ public class IrEmboraHall extends Cena {
 
     @Override
     public void start() throws Exception {
+
         super.start();
-        this.getPersonagem().setCenaAtual(CenaAtualHall.IR_EMBORA_HALL);
+
     }
 
     @Override
@@ -22,7 +23,9 @@ public class IrEmboraHall extends Cena {
     }
 
     @Override
-    public void setCenaAnterior() {
-        this.setCenaAnterior(new Hall(getPersonagem()));
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualHall.IR_EMBORA_HALL);
     }
+
+
 }

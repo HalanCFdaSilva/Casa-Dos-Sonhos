@@ -1,12 +1,12 @@
-package com.example.casadossonhos.casa.entrada.hall.mezanino;
+package com.example.casadossonhos.casa.entrada.hall.segundoAndar;
 
 import com.example.casadossonhos.Jogador.Personagem;
 import com.example.casadossonhos.casa.Cena;
 import com.example.casadossonhos.casa.CenaAtual.CenaAtualSegundoAndar;
 import com.example.casadossonhos.casa.entrada.hall.cenas.Hall;
-import com.example.casadossonhos.casa.entrada.hall.mezanino.quarto.Quarto;
-import com.example.casadossonhos.casa.entrada.hall.mezanino.salaPatos.SalaPatos;
-import com.example.casadossonhos.casa.entrada.hall.mezanino.salaRGB.SalaRGB;
+import com.example.casadossonhos.casa.entrada.hall.segundoAndar.quarto.Quarto;
+import com.example.casadossonhos.casa.entrada.hall.segundoAndar.salaPatos.SalaPatos;
+import com.example.casadossonhos.casa.entrada.hall.segundoAndar.salaRGB.SalaRGB;
 
 public class SegundoAndar extends Cena {
     public SegundoAndar(Personagem personagem) {
@@ -16,8 +16,9 @@ public class SegundoAndar extends Cena {
 
     @Override
     public void start() throws Exception {
+
         super.start();
-        this.getPersonagem().setCenaAtual(CenaAtualSegundoAndar.SEGUNDO_ANDAR);
+
     }
 
     @Override
@@ -36,7 +37,9 @@ public class SegundoAndar extends Cena {
     }
 
     @Override
-    public void setCenaAnterior() {
-        this.setCenaAnterior(new Hall(this.getPersonagem()));
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualSegundoAndar.SEGUNDO_ANDAR);
     }
+
+
 }

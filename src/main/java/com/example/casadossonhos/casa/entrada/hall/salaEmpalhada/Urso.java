@@ -13,8 +13,8 @@ public class Urso extends Cena {
 
     @Override
     public void start() throws Exception {
+
         super.start();
-        this.getPersonagem().setCenaAtual(CenaAtualEmpalhada.URSO);
         this.getPersonagem().getEventos().find("Morte urso").ativar();
         AlertaMorte.alertaVidaInfinita(new Hall(this.getPersonagem()));
     }
@@ -29,5 +29,10 @@ public class Urso extends Cena {
     public void aoClicarBotao() {
         super.aoClicarBotao();
         botoes.desativarVoltar(this.pane);
+    }
+
+    @Override
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualEmpalhada.URSO);
     }
 }

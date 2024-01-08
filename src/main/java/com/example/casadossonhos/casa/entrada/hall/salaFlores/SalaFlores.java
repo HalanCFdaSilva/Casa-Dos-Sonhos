@@ -8,16 +8,6 @@ import com.example.casadossonhos.casa.entrada.hall.cenas.Hall;
 public class SalaFlores extends Cena {
     public SalaFlores(Personagem personagem) {
         super(personagem);
-
-
-    }
-
-    @Override
-    public void start() throws Exception {
-
-        this.getPersonagem().setCenaAtual(CenaAtualFlores.SALA_FLORES);
-        super.start();
-
     }
 
     @Override
@@ -50,7 +40,8 @@ public class SalaFlores extends Cena {
     }
 
     @Override
-    public void setCenaAnterior() {
-        this.setCenaAnterior(new Hall(this.getPersonagem()));
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualFlores.SALA_FLORES);
     }
+
 }

@@ -11,11 +11,6 @@ public class LareiraSalaEmpalhada extends Cena {
 
     }
 
-    @Override
-    public void start() throws Exception {
-        super.start();
-        this.getPersonagem().setCenaAtual(CenaAtualEmpalhada.LAREIRA);
-    }
 
     @Override
     public void guardarEnderecoTexto() {
@@ -28,7 +23,8 @@ public class LareiraSalaEmpalhada extends Cena {
     }
 
     @Override
-    public void setCenaAnterior() {
-        this.setCenaAnterior(new SalaEmpalhada(getPersonagem()));
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualEmpalhada.LAREIRA);
     }
+
 }

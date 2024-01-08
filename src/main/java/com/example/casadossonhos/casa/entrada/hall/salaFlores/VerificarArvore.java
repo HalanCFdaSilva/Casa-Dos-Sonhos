@@ -9,11 +9,6 @@ public class VerificarArvore extends Cena {
         super(personagem);
     }
 
-    @Override
-    public void start() throws Exception {
-        super.start();
-        this.getPersonagem().setCenaAtual(CenaAtualFlores.VERIFICAR_ARVORE);
-    }
 
     @Override
     public void guardarEnderecoTexto() {
@@ -23,7 +18,8 @@ public class VerificarArvore extends Cena {
     }
 
     @Override
-    public void setCenaAnterior() {
-        this.setCenaAnterior(new SalaFlores(this.getPersonagem()));
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualFlores.VERIFICAR_ARVORE);
     }
+
 }

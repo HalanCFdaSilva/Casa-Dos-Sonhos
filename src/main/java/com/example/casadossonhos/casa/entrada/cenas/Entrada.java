@@ -17,11 +17,7 @@ public class Entrada extends Cena {
 
     }
 
-    @Override
-    public void start() throws Exception {
-        this.getPersonagem().setCenaAtual(CenaAtualEntrada.ENTRADA);
-        super.start();
-    }
+
 
 
     @Override
@@ -36,6 +32,11 @@ public class Entrada extends Cena {
         botoes.funcaoBotao( new SeAproximarDaCasa(this.getPersonagem()),"Se aproximar da casa");
         botoes.funcaoBotao( new IrEmbora(this.getPersonagem()), "Ir Embora");
         botoes.desativarVoltar(this.pane);
+    }
+
+    @Override
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualEntrada.ENTRADA);
     }
 
 

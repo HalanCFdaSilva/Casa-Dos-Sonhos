@@ -8,8 +8,6 @@ public class OlharJanela extends Cena {
     public OlharJanela(Personagem personagem) {
         super(personagem);
 
-        this.getPersonagem().setCenaAtual(CenaAtualEntrada.OLHAR_JANELA);
-
     }
 
     @Override
@@ -30,6 +28,11 @@ public class OlharJanela extends Cena {
         this.botoes.funcaoBotao(new BaterAPorta(this.getPersonagem()), "Bater na porta");
         this.botoes.funcaoBotao(new IrEmbora(this.getPersonagem()),"Ir embora");
         botoes.desativarVoltar(this.pane);
+    }
+
+    @Override
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualEntrada.OLHAR_JANELA);
     }
 
 

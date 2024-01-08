@@ -12,12 +12,6 @@ public class ArmarioHall extends Cena {
 
     }
 
-    @Override
-    public void start() throws Exception {
-        this.getPersonagem().setCenaAtual(CenaAtualHall.ARMARIO_HALL);
-        super.start();
-
-    }
 
     @Override
     public void guardarEnderecoTexto() {
@@ -34,7 +28,9 @@ public class ArmarioHall extends Cena {
     }
 
     @Override
-    public void setCenaAnterior() {
-        this.setCenaAnterior(new Hall(getPersonagem()));
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualHall.ARMARIO_HALL);
     }
+
+
 }

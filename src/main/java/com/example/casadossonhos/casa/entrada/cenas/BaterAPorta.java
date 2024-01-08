@@ -11,12 +11,7 @@ public class BaterAPorta extends Cena {
 
     }
 
-    @Override
-    public void start() throws Exception {
-        this.getPersonagem().setCenaAtual(CenaAtualEntrada.BATER_A_PORTA);
-        super.start();
 
-    }
 
     @Override
     public void guardarEnderecoTexto() {
@@ -36,13 +31,9 @@ public class BaterAPorta extends Cena {
     }
 
     @Override
-    public void setCenaAnterior() {
-        if (getPersonagem().getCenaAtual().equals(CenaAtualEntrada.OLHAR_JANELA)){
-            this.setCenaAnterior(new OlharJanela(getPersonagem()));
-        }
-        if (getPersonagem().getCenaAtual().equals(CenaAtualEntrada.SE_APROXIMAR_DA_CASA)){
-            this.setCenaAnterior(new SeAproximarDaCasa(getPersonagem()));
-        }
-
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualEntrada.BATER_A_PORTA);
     }
+
+
 }

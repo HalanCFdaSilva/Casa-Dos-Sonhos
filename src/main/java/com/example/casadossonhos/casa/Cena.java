@@ -20,12 +20,12 @@ public abstract class Cena implements CenaService {
 
         this.personagem = personagem;
         this.criarCena();
-        this.setCenaAnterior();
+
 
     }
 
     private void criarCena(){
-        this.enderecoTextos = new GuardadorEnderecoTextos();
+
         this.textos = new Textos();
         this.pane = new Pane();
         this.sceneBase1 = new Scene(pane, 542, 576);
@@ -45,12 +45,10 @@ public abstract class Cena implements CenaService {
     }
 
     public void setCenaAnterior(Cena cenaAnterior) {
+
         this.cenaAnterior = cenaAnterior;
     }
 
-    public void setCenaAnterior() {
-        this.cenaAnterior = null;
-    }
 
 
 
@@ -59,6 +57,8 @@ public abstract class Cena implements CenaService {
 
     public void start() throws Exception {
 
+        this.cenaAtual();
+        this.enderecoTextos = new GuardadorEnderecoTextos(personagem);
         this.guardarEnderecoTexto();
         sceneBase1.getStylesheets().add("cssArchives/casa/properties.css");
         textos.CriarLabel();
@@ -89,9 +89,9 @@ public abstract class Cena implements CenaService {
 
     @Override
     public void aoClicarBotao() {
-        if (!(this.cenaAnterior == null)){
-            botoes.funcaoBotao( this.cenaAnterior,"Voltar");
-        }
+        this.setCenaAnterior(this.getPersonagem().getCenaAtual().cenaAnterior(getPersonagem()));
+        botoes.funcaoBotao( this.cenaAnterior,"Voltar");
+
     }
 }
 

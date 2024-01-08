@@ -10,18 +10,9 @@ public class IrEmbora extends Cena {
 
         super(personagem);
 
-        this.getPersonagem().setCenaAtual(CenaAtualEntrada.IR_EMBORA);
-
     }
 
-    @Override
-    public void start() throws Exception {
 
-        super.start();
-
-
-
-    }
 
     @Override
     public void guardarEnderecoTexto() {
@@ -35,7 +26,9 @@ public class IrEmbora extends Cena {
     }
 
     @Override
-    public void setCenaAnterior() {
-
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualEntrada.IR_EMBORA);
     }
+
+
 }

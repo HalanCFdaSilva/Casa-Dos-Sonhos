@@ -9,13 +9,6 @@ public class OlharMesaSalaFlores extends Cena {
         super(personagem);
     }
 
-    @Override
-    public void start() throws Exception {
-
-        this.getPersonagem().setCenaAtual(CenaAtualFlores.OLHAR_MESA_FLORES);
-        super.start();
-
-    }
 
 
     @Override
@@ -41,7 +34,8 @@ public class OlharMesaSalaFlores extends Cena {
     }
 
     @Override
-    public void setCenaAnterior() {
-        this.setCenaAnterior(new SalaFlores(this.getPersonagem()));
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualFlores.OLHAR_MESA_FLORES);
     }
+
 }

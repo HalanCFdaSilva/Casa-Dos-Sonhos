@@ -10,11 +10,6 @@ public class MesaHall extends Cena {
 
     }
 
-    @Override
-    public void start() throws Exception {
-        super.start();
-        this.getPersonagem().setCenaAtual(CenaAtualHall.MESA_HALL);
-    }
 
     @Override
     public void guardarEnderecoTexto() {
@@ -23,7 +18,9 @@ public class MesaHall extends Cena {
     }
 
     @Override
-    public void setCenaAnterior() {
-        this.setCenaAnterior(new Hall(getPersonagem()));
+    public void cenaAtual() {
+        this.getPersonagem().setCenaAtual(CenaAtualHall.MESA_HALL);
     }
+
+
 }
