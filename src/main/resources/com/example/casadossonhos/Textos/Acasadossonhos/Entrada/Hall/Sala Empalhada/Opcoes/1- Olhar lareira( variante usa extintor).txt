@@ -1,0 +1,4 @@
+1- Pegar a chave e a foto
+2- Pegar somente a chave
+3- Pegar somente a foto
+4- Deixar os dois

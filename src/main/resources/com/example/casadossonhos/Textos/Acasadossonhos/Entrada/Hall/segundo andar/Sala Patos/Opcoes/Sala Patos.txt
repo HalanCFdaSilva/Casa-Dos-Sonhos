@@ -1,0 +1,3 @@
+Verificar lado esquerdo
+Verificar o meio
+Verificar o lado direito

@@ -1,0 +1,5 @@
+O teclado numérico acende e no visor do rádio aparece a imagem de três pontinhos sequidos de uma virgula e mais um pontinho, a música ao fundo continua a tocar.
+
+OPCOES 
+1- DIGITAR UMA ESTAÇÃO
+2- Voltar

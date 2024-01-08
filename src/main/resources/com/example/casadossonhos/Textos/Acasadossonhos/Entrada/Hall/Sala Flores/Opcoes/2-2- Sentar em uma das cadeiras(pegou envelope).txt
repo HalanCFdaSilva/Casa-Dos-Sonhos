@@ -1,0 +1,4 @@
+Sentar na cadeira mais distante
+Sentar na cadeira mais próxima
+Sentar na cadeira há esquerda
+Sentar na cadeira há direita

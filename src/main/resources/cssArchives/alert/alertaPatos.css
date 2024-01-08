@@ -1,0 +1,25 @@
+.root{
+    -fx-background-color: white;
+
+}
+
+#alerta-Patos{
+
+     -fx-background-color:gray;
+    -fx-pref-height: 100px;
+    -fx-pref-width: 200px;
+}
+
+#button-type{
+
+    -fx-width: 100px;
+    -fx-background-color: black;
+}
+
+.button{
+
+    -fx-background-image: url('pictures/botao.jpg');
+    -fx-background-size: 20px 30px;
+
+
+}
