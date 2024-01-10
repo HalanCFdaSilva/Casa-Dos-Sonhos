@@ -12,7 +12,6 @@ public class Porao extends Cena {
         super(personagem);
     }
 
-
     @Override
     public void guardarEnderecoTexto() {
         this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Empalhada/Porao/Textos/Porão.txt");

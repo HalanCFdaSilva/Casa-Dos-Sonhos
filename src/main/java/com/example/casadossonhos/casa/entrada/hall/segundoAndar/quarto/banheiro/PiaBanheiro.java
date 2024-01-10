@@ -9,7 +9,6 @@ public class PiaBanheiro extends Cena {
         super(personagem);
     }
 
-
     @Override
     public void guardarEnderecoTexto() {
 
