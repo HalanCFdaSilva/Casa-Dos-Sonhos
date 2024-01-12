@@ -1,6 +1,7 @@
 package com.example.casadossonhos.casa;
 
 import com.example.casadossonhos.Comandos.botao.Botoes;
+import com.example.casadossonhos.Comandos.textos.GuardadorEnderecoTextos;
 import com.example.casadossonhos.Comandos.textos.Textos;
 import com.example.casadossonhos.Jogador.Personagem;
 import javafx.scene.Scene;

@@ -14,17 +14,18 @@ public class SalaEmpalhada extends Cena {
 
     @Override
     public void guardarEnderecoTexto() {
+
+        this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Empalhada/Textos/" +
+                "sala empalhada.txt");
         if (this.getPersonagem().getEventos().find("Morte urso").isAtivo()){
-            this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Empalhada/Textos/" +
-                    "sala empalhada( Variante primeira vez pós urso).txt");
+
             this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/Sala Empalhada/Opcoes/" +
-                    "sala empalhada( Variante primeira vez pós urso).txt");
+                    "sala empalhada( Morte urso).txt");
 
         }else{
-            this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Empalhada/Textos/" +
-                    "sala Empalhada ( variante primeira vez).txt");
+
             this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/Sala Empalhada/Opcoes/" +
-                    "sala Empalhada ( variante primeira vez).txt");
+                    "sala Empalhada.txt");
         }
 
     }
@@ -34,12 +35,13 @@ public class SalaEmpalhada extends Cena {
 
         super.aoClicarBotao();
         botoes.funcaoBotao(new LareiraSalaEmpalhada(this.getPersonagem()),"Olhar lareira");
-        botoes.funcaoBotao(new MesaDeCantoSalaEmpalhada(this.getPersonagem()),"Verificar mesa de canto");
+
+        botoes.funcaoBotao(new MesaDeCantoSalaEmpalhada(this.getPersonagem()),"Verificar a mesa de canto");
 
         if (this.getPersonagem().getEventos().find("Morte urso").isAtivo()){
             botoes.funcaoBotao(new Porao(this.getPersonagem()), "Verificar porta enferrujada");
         }else{
-            botoes.funcaoBotao(new Urso(this.getPersonagem()), "Observar o urso");
+            botoes.funcaoBotao(new Urso(this.getPersonagem()), "Observar urso");
         }
 
     }

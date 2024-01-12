@@ -17,7 +17,7 @@ public class LareiraSalaEmpalhada extends Cena {
         if(this.getPersonagem().getEventos().find("Apagou lareira").isAtivo()){
 
         }else {
-            this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Empalhada/Textos/1- Olhar lareira( sem item).txt");
+            this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Empalhada/Textos/1- Olhar lareira.txt");
             this.getGuardadorEnderecoTextos().setEnderecoAcoes();
         }
     }

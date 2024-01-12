@@ -23,12 +23,5 @@ public enum CenaAtualPatos implements CenaAtual {
         }
     }
 
-    @Override
-    public String modificadorAmbienteTexto(Personagem personagem, String enderecoTexto) {
-        switch ((CenaAtualPatos) personagem.getCenaAtual()){
 
-            default: return enderecoTexto;
-
-        }
-    }
 }

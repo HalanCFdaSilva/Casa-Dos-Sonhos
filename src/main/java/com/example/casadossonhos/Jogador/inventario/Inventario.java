@@ -37,7 +37,7 @@ public class Inventario {
         Documento certidaoNascimento = new Documento("Certidão Nascimento");
         documentos.add(certidaoNascimento);
 
-        Documento panfletoMuseu = new Documento("panfleto Museu");
+        Documento panfletoMuseu = new Documento("Panfleto Museu");
         documentos.add(panfletoMuseu);
 
         Documento identidade = new Documento("identidade");
@@ -52,6 +52,9 @@ public class Inventario {
         Documento prontuarioMedico = new Documento("Prontuario médico");
         documentos.add(prontuarioMedico);
 
+        Documento fotoQueimada = new Documento("Foto semi-Queimada");
+        documentos.add(fotoQueimada);
+
 
         this.chaves = new ArrayList<>();
 
@@ -63,6 +66,9 @@ public class Inventario {
 
         Chave chaveFerro =new Chave("chave Ferro");
         chaves.add(chaveFerro);
+
+        Chave chaveBranca =new Chave("chave Branca");
+        chaves.add(chaveBranca);
 
 
         this.outros = new ArrayList<>();

@@ -12,12 +12,11 @@ public class SalaFlores extends Cena {
 
     @Override
     public void guardarEnderecoTexto() {
-        if (!this.getPersonagem().getInteracoes().getInteracao("SalaPatos").isPrimeiraVez()){
+        this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Flores/Textos/sala flores.txt");
 
-            this.getGuardadorEnderecoTextos().setEnderecoTexto("FALTA.txt");
+        if (!this.getPersonagem().getInteracoes().getInteracao("SalaPatos").isPrimeiraVez()){
             this.getGuardadorEnderecoTextos().setEnderecoAcoes("FALTA.txt");
         }else{
-            this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Flores/Textos/sala flores.txt");
             this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/Sala Flores/Opcoes/sala flores.txt");
         }
     }

@@ -25,12 +25,4 @@ public enum CenaAtualHall implements CenaAtual {
         }
     }
 
-    @Override
-    public String modificadorAmbienteTexto(Personagem personagem, String enderecoTexto) {
-        switch ((CenaAtualHall) personagem.getCenaAtual()){
-
-            default: return enderecoTexto;
-
-        }
-    }
 }

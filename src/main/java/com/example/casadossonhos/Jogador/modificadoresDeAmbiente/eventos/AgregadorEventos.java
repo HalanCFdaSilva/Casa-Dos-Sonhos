@@ -54,6 +54,10 @@ public class AgregadorEventos {
         this.eventos.add(ouviuEstacao192);
 
         Evento apagouLareira = new Evento("Apagou lareira");
+        this.eventos.add(apagouLareira);
+
+        Evento abriuMesaSalaEmpalhada = new Evento("Abriu mesa sala empalhada");
+        this.eventos.add(abriuMesaSalaEmpalhada);
     }
 
     public Evento find(String nomeEvento){

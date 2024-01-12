@@ -34,11 +34,4 @@ public enum CenaAtualBanheiro implements CenaAtual{
 
     }
 
-    @Override
-    public String modificadorAmbienteTexto(Personagem personagem, String enderecoTexto) {
-        switch ((CenaAtualBanheiro)personagem.getCenaAtual()){
-
-            default: return enderecoTexto;
-        }
-    }
 }

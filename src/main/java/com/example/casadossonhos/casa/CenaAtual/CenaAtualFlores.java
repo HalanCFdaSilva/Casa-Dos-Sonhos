@@ -24,12 +24,6 @@ public enum CenaAtualFlores implements CenaAtual {
         }
     }
 
-    @Override
-    public String modificadorAmbienteTexto(Personagem personagem, String enderecoTexto) {
-        switch ((CenaAtualFlores) personagem.getCenaAtual()){
 
-            default: return enderecoTexto;
 
-        }
-    }
 }

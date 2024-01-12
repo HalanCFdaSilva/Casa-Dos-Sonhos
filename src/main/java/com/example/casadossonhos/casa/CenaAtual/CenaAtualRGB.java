@@ -20,12 +20,5 @@ public enum CenaAtualRGB implements CenaAtual {
         }
     }
 
-    @Override
-    public String modificadorAmbienteTexto(Personagem personagem, String enderecoTexto) {
-        switch ((CenaAtualRGB) personagem.getCenaAtual()){
 
-            default: return enderecoTexto;
-
-        }
-    }
 }

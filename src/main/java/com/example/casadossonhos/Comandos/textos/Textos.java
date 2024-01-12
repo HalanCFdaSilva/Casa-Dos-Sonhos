@@ -42,6 +42,7 @@ public class Textos {
 
 
         }
+        scanner.close();
     }
 
     public Pane adicionarNodes(Pane pane){

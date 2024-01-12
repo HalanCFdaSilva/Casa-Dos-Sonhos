@@ -13,12 +13,13 @@ public class SentarCadeirasFlores extends Cena {
 
     @Override
     public void guardarEnderecoTexto() {
+
+        this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Flores/Textos/2- Sentar em uma das cadeiras.txt");
         if (this.getPersonagem().getInventario().isPegouItem("Prontuario medico")){
-            this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/Sala Flores/Opcoes/2- Sentar em uma das cadeiras(pegou envelope).txt");
-            this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Flores/Textos/2- Sentar em uma das cadeiras(pegou envelope).txt");
+            this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/Sala Flores/Opcoes/2- Sentar em uma das cadeiras( pegou Prontuario médico).txt");
         }else{
-            this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/Sala Flores/Opcoes/2- Sentar em uma das cadeiras( nao pegou envelope).txt");
-            this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Flores/Textos/2- Sentar em uma das cadeiras( nao pegou envelope).txt");
+            this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/Sala Flores/Opcoes/2- Sentar em uma das cadeiras.txt");
+
         }
 
     }

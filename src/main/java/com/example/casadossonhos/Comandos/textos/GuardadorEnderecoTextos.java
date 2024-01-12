@@ -1,10 +1,11 @@
-package com.example.casadossonhos.casa;
+package com.example.casadossonhos.Comandos.textos;
 
 import com.example.casadossonhos.Jogador.Personagem;
-import com.example.casadossonhos.casa.CenaAtual.CenaAtual;
 
 public class GuardadorEnderecoTextos {
 
+
+    private ModificadorEnderecoTextos modificadorEnderecoTextos;
     private Personagem personagem;
     private String enderecoBase;
     private String enderecoTexto;
@@ -13,7 +14,10 @@ public class GuardadorEnderecoTextos {
     public GuardadorEnderecoTextos(Personagem personagem) {
         this.enderecoBase = "src/main/resources/com/example/casadossonhos/Textos/Acasadossonhos/Entrada/";
         this.personagem = personagem;
+
+        modificadorEnderecoTextos = new ModificadorEnderecoTextos(personagem);
     }
+
 
     private String getEnderecoBase() {
         return enderecoBase;
@@ -23,9 +27,10 @@ public class GuardadorEnderecoTextos {
         return this.getEnderecoBase() + enderecoTexto;
     }
 
-    public void setEnderecoTexto(java.lang.String enderecoTexto) {
-        this.enderecoTexto = this.personagem.getCenaAtual().modificadorAmbienteTexto(personagem,enderecoTexto);
+    public void setEnderecoTexto(String enderecoTexto) {
+        this.enderecoTexto = this.modificadorEnderecoTextos.modificarEnderecoTexto(enderecoTexto);
     }
+
 
     public String getEnderecoAcoes() {
         if (this.enderecoAcoes.equals("Não possui")) {

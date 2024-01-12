@@ -15,17 +15,10 @@ public enum CenaAtualPorao implements CenaAtual {
     public Cena cenaAnterior(Personagem personagem) {
         switch ((CenaAtualPorao)personagem.getCenaAtual()){
             case PORAO: return new SalaEmpalhada(personagem);
-            case SALA_VIDA: return  new Porao(personagem);
+            case SALA_VIDA,SALA_MORTE: return  new Porao(personagem);
             default: return null;
         }
     }
 
-    @Override
-    public String modificadorAmbienteTexto(Personagem personagem, String enderecoTexto) {
-        switch ((CenaAtualPorao) personagem.getCenaAtual()){
 
-            default: return enderecoTexto;
-
-        }
-    }
 }

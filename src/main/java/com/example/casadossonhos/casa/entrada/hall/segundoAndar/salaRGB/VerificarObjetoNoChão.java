@@ -19,7 +19,7 @@ public class VerificarObjetoNoChão extends Cena {
     @Override
     public void guardarEnderecoTexto() {
 
-        this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/segundo andar/Opcoes/5-3- Verificar a porta com leds.txt");
+        this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/segundo andar/Sala Rgb/Textos/1- Pegar o objeto no chão.txt");
 
 
     }
