@@ -15,7 +15,7 @@ public class Urso extends Cena {
     public void start() throws Exception {
 
         super.start();
-        this.getPersonagem().getEventos().find("Morte urso").ativar();
+        this.getPersonagem().getAgregadorModificadores().getAgregadorEventos().find("Morte urso").ativar();
         AlertaMorte.alertaVidaInfinita(new Hall(this.getPersonagem()));
     }
 

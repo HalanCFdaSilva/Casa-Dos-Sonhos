@@ -52,6 +52,22 @@ public class ModificadorEnderecoTextos {
     private String modificadorEnderecoCenaAtualBanheiro(String enderecoTexto) {
         switch ((CenaAtualBanheiro)personagem.getCenaAtual()){
 
+            case BANHEIRA: {
+                //modificar if abaixo
+                if (this.personagem.getAgregadorModificadores().getAgregadorEventos().find("Encheu banheira").isAtivo()){
+                    if (this.personagem.getAgregadorModificadores().getAgregadorFichas().pegouFicha("Banheira")) {
+                        return enderecoTexto;
+                    }
+                    return enderecoTexto;
+
+                }else {
+                    if (this.personagem.getAgregadorModificadores().getAgregadorFichas().pegouFicha("Banheira")) {
+                        return enderecoTexto;
+                    }
+                    return enderecoTexto;
+                }
+            }
+
             default: return enderecoTexto;
         }
     }
@@ -59,7 +75,7 @@ public class ModificadorEnderecoTextos {
         switch ( (CenaAtualEmpalhada)personagem.getCenaAtual()){
 
             case LAREIRA: {
-                if (personagem.getEventos().find("Apagou lareira").isAtivo()){
+                if (personagem.getAgregadorModificadores().getAgregadorEventos().find("Apagou lareira").isAtivo()){
                     enderecoTexto = enderecoTexto.replace(".txt", "( Apagou lareira).txt");
 
                     if (personagem.getInventario().isPegouItem("Foto semi-Queimada") ||
@@ -90,7 +106,7 @@ public class ModificadorEnderecoTextos {
 
             case MESA_DE_CANTO:{
 
-                if (personagem.getEventos().find("Abriu mesa sala empalhada").isAtivo()){
+                if (personagem.getAgregadorModificadores().getAgregadorEventos().find("Abriu mesa sala empalhada").isAtivo()){
 
                     enderecoTexto = enderecoTexto.replace(".txt", "( aberto).txt");
                     if (personagem.getInventario().isPegouItem("testamento")){
@@ -101,10 +117,10 @@ public class ModificadorEnderecoTextos {
             }
 
             case SALA_EMPALHADA:{
-                if (personagem.getInteracoes().getInteracao("SalaEmpalhada").isPrimeiraVez()){
+                if (personagem.getAgregadorModificadores().getAgregadorInteracaoInicial().getInteracao("SalaEmpalhada").isPrimeiraVez()){
 
                     enderecoTexto = enderecoTexto.replace(".txt", "( primeira vez).txt");
-                    if (personagem.getEventos().find("Morte urso").isAtivo()){
+                    if (personagem.getAgregadorModificadores().getAgregadorEventos().find("Morte urso").isAtivo()){
                         enderecoTexto = enderecoTexto.replace(".txt", "( Morte urso).txt");
 
                     }
@@ -131,7 +147,8 @@ public class ModificadorEnderecoTextos {
 
             case SALA_FLORES:{
 
-                if (personagem.getInteracoes().getInteracao("SalaPatos").isPrimeiraVez()){
+                if (personagem.getAgregadorModificadores().getAgregadorInteracaoInicial()
+                        .getInteracao("SalaPatos").isPrimeiraVez()){
 
                     enderecoTexto = "FALTA.txt";
                 }
@@ -177,6 +194,14 @@ public class ModificadorEnderecoTextos {
 
     private String modificadorEnderecoCenaAtualPorao(String enderecoTexto) {
         switch ((CenaAtualPorao)personagem.getCenaAtual()){
+
+            case SALA_VIDA: {
+                if (personagem.getAgregadorModificadores().getAgregadorPortasTrancadas().acharPorta("Sala Vida").isPortaDestrancada()){
+
+                    enderecoTexto = enderecoTexto.replace(".txt", "( destrancada).txt");
+                }
+                return enderecoTexto;
+            }
 
             default: return enderecoTexto;
 

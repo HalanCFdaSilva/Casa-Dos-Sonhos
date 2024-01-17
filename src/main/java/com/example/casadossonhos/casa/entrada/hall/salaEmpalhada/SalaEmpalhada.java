@@ -17,7 +17,7 @@ public class SalaEmpalhada extends Cena {
 
         this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Empalhada/Textos/" +
                 "sala empalhada.txt");
-        if (this.getPersonagem().getEventos().find("Morte urso").isAtivo()){
+        if (this.getPersonagem().getAgregadorModificadores().getAgregadorEventos().find("Morte urso").isAtivo()){
 
             this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/Sala Empalhada/Opcoes/" +
                     "sala empalhada( Morte urso).txt");
@@ -38,7 +38,7 @@ public class SalaEmpalhada extends Cena {
 
         botoes.funcaoBotao(new MesaDeCantoSalaEmpalhada(this.getPersonagem()),"Verificar a mesa de canto");
 
-        if (this.getPersonagem().getEventos().find("Morte urso").isAtivo()){
+        if (this.getPersonagem().getAgregadorModificadores().getAgregadorEventos().find("Morte urso").isAtivo()){
             botoes.funcaoBotao(new Porao(this.getPersonagem()), "Verificar porta enferrujada");
         }else{
             botoes.funcaoBotao(new Urso(this.getPersonagem()), "Observar urso");

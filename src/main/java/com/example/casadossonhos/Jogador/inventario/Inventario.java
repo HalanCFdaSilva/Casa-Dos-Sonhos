@@ -67,7 +67,7 @@ public class Inventario {
         Chave chaveFerro =new Chave("chave Ferro");
         chaves.add(chaveFerro);
 
-        Chave chaveBranca =new Chave("chave Branca");
+        Chave chaveBranca =new Chave("chave Prata");
         chaves.add(chaveBranca);
 
 
@@ -105,7 +105,7 @@ public class Inventario {
         this.documentos.forEach(item -> {
             if (item.isPegouItem()){
                 Menu documentoItem = new Menu(item.nomeDoItem());
-                MenuItem olharDocumento = new MenuItem("Olhar documento");
+                MenuItem olharDocumento = new MenuItem("olhar.txt documento");
                 MenuItem usarDocumento = new MenuItem("Usar documento");
                 documentoItem.getItems().addAll(olharDocumento,usarDocumento);
                 documentos.getItems().add(documentoItem);
@@ -118,7 +118,7 @@ public class Inventario {
         this.chaves.forEach(item -> {
             if (item.isPegouItem()){
                 Menu documentoItem = new Menu(item.getNomeItem());
-                MenuItem olharDocumento = new MenuItem("Olhar chave");
+                MenuItem olharDocumento = new MenuItem("olhar.txt chave");
                 MenuItem usarDocumento = new MenuItem("Usar chave");
                 documentoItem.getItems().addAll(olharDocumento,usarDocumento);
                 chaves.getItems().add(documentoItem);
@@ -130,7 +130,7 @@ public class Inventario {
         this.outros.forEach(outroItem -> {
             if (outroItem.isPegouItem()){
                 Menu item = new Menu(outroItem.getNomeItem());
-                MenuItem olharItem = new MenuItem("Olhar item");
+                MenuItem olharItem = new MenuItem("olhar.txt item");
                 MenuItem usarItem = new MenuItem("Usar item");
                 item.getItems().addAll(olharItem,usarItem);
                 outros.getItems().add(item);

@@ -23,7 +23,7 @@ public class SeAproximarDaCasa extends Cena {
     @Override
     public void aoClicarBotao() {
         super.aoClicarBotao();
-        botoes.funcaoBotao(new OlharJanela(this.getPersonagem()), "Olhar a janela");
+        botoes.funcaoBotao(new OlharJanela(this.getPersonagem()), "Olhar da janela");
         botoes.funcaoBotao(new BaterAPorta(this.getPersonagem()), "Bater a porta");
         botoes.funcaoBotao(new IrEmbora(this.getPersonagem()), "Ir embora");
         botoes.desativarVoltar(this.pane);

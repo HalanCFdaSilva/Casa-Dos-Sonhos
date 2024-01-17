@@ -1,7 +1,9 @@
 package com.example.casadossonhos.Comandos.alerta;
 
 
+import com.example.casadossonhos.Jogador.Personagem;
 import com.example.casadossonhos.casa.Cena;
+import com.example.casadossonhos.casa.entrada.hall.segundoAndar.quarto.ArmarioQuarto;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
@@ -11,8 +13,8 @@ import javafx.scene.layout.Pane;
 
 
 public class QuebrarGloboDeNeve extends Alerta {
-    public QuebrarGloboDeNeve(Cena cena) {
-        super(cena);
+    public QuebrarGloboDeNeve(Personagem personagem) {
+        super(personagem);
     }
 
 
@@ -38,7 +40,8 @@ public class QuebrarGloboDeNeve extends Alerta {
 
         alert.setOnCloseRequest(ActionEvent -> {
             try {
-                getCena().start();
+                ArmarioQuarto armarioQuarto = new ArmarioQuarto(this.getPersonagem());
+                armarioQuarto.start();
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
@@ -48,7 +51,7 @@ public class QuebrarGloboDeNeve extends Alerta {
 
         alert.showAndWait().ifPresent(buttonType -> {
             if (buttonType == buttonTypePegar){
-                getCena().getPersonagem().getInventario().pegarItem("Fita Cassete");
+                this.getPersonagem().getInventario().pegarItem("Fita Cassete");
             }
         });
 

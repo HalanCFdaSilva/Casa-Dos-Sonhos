@@ -13,6 +13,19 @@ public class EspelhoBanheiro extends Cena {
     @Override
     public void guardarEnderecoTexto() {
 
+        this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/segundo andar/Quarto/banheiro/Textos/2- Verificar Espelho.txt");
+        this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/segundo andar/Quarto/banheiro/Opcoes/2- Verificar Espelho.txt");
+    }
+
+    @Override
+    public void aoClicarBotao(){
+        super.aoClicarBotao();
+        botoes.funcaoBotao(new Banheira(this.getPersonagem()), "Verificar banheira");
+
+        botoes.funcaoBotao(new EspelhoBanheiro(this.getPersonagem()), "Olhar espelho");
+
+
+
     }
 
     @Override

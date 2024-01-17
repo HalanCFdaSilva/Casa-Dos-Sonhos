@@ -1,6 +1,7 @@
 package com.example.casadossonhos;
 
 
+import com.example.casadossonhos.Comandos.alerta.AlertaSintonizadorRadio;
 import com.example.casadossonhos.Jogador.Personagem;
 import com.example.casadossonhos.casa.entrada.cenas.Entrada;
 import javafx.application.Application;
@@ -45,6 +46,7 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.setTitle("A casa dos Sonhos");
         stage.show();
+
 
 
 

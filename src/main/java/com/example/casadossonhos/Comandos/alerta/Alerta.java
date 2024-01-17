@@ -1,19 +1,19 @@
 package com.example.casadossonhos.Comandos.alerta;
 
-import com.example.casadossonhos.casa.Cena;
+import com.example.casadossonhos.Jogador.Personagem;
+import javafx.scene.layout.Pane;
+
 
 public abstract class Alerta  implements AtivaCenaInterface{
+    private Personagem personagem;
 
-    private Cena cena;
-
-    public Alerta(Cena cena) {
-        this.cena = cena;
+    public Alerta(Personagem personagem) {
+        this.personagem = personagem;
     }
 
     public Alerta(){}
 
-
-    public Cena getCena() {
-        return cena;
+    public Personagem getPersonagem() {
+        return personagem;
     }
 }

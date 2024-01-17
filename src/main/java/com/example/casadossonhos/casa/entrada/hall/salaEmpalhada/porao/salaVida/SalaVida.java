@@ -12,13 +12,13 @@ public class SalaVida extends Cena {
 
     @Override
     public void guardarEnderecoTexto() {
-        if (this.getPersonagem().getInteracoes().getInteracao("SalaVida").isPrimeiraVez()){
+        if (this.getPersonagem().getAgregadorModificadores().getAgregadorInteracaoInicial().getInteracao("SalaVida").isPrimeiraVez()){
             this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Empalhada/Porao/sala vida/" +
-                    "Textos/sala vida( trancada).txt");
+                    "Textos/sala vida.txt");
 
         }else {
             this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Empalhada/Porao/sala vida/" +
-                    "Textos/sala vida( abertaPrimeiraVez).txt");
+                    "Textos/sala vida( destrancada).txt");
 
         }
         this.getGuardadorEnderecoTextos().setEnderecoAcoes();

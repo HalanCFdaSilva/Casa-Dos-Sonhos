@@ -14,11 +14,11 @@ public class Quarto extends Cena {
 
     @Override
     public void guardarEnderecoTexto() {
-        if (this.getPersonagem().getInteracoes().getInteracao("Quarto").isPrimeiraVez()) {
+        if (this.getPersonagem().getAgregadorModificadores().getAgregadorInteracaoInicial().getInteracao("Quarto").isPrimeiraVez()) {
             this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/segundo andar/Opcoes/5-2- Verificar porta simples.txt");
             this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/segundo andar/Textos/5-2- Verificar porta simples.txt");
         } else {
-            if (this.getPersonagem().getEventos().find("Quebrou bola de cristal").isAtivo()) {
+            if (this.getPersonagem().getAgregadorModificadores().getAgregadorEventos().find("Quebrou bola de cristal").isAtivo()) {
                 if (this.getPersonagem().getInventario().isPegouItem("Fita Cassete")) {
                     this.getGuardadorEnderecoTextos().setEnderecoTexto("FALTA.txt");
                     this.getGuardadorEnderecoTextos().setEnderecoAcoes("FALTA.txt");
@@ -37,8 +37,8 @@ public class Quarto extends Cena {
     @Override
     public void aoClicarBotao() {
         super.aoClicarBotao();
-        if (this.getPersonagem().getInteracoes().getInteracao("Quarto").isPrimeiraVez()) {
-            botoes.entrou("SalaRGB", "Entrar").
+        if (this.getPersonagem().getAgregadorModificadores().getAgregadorInteracaoInicial().getInteracao("Quarto").isPrimeiraVez()) {
+            botoes.entrou("Quarto", "Entrar").
                     funcaoBotao(new Quarto(this.getPersonagem()),
                             "Entrar");
         } else {

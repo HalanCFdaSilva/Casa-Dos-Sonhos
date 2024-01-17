@@ -15,6 +15,7 @@ public class PegarExtintor extends Cena {
         this.getPersonagem().getInventario().pegarItem("extintor");
     }
 
+
     @Override
     public void guardarEnderecoTexto() {
 

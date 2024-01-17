@@ -13,11 +13,11 @@ public class OlharMesaSalaFlores extends Cena {
 
     @Override
     public void guardarEnderecoTexto() {
-        this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Flores/Textos/2- Olhar a mesa.txt");
+        this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Flores/Textos/2- olhar.txt a mesa.txt");
         if (this.getPersonagem().getInventario().isPegouItem("Prontuario médico")){
-            this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/Sala Flores/Opcoes/2- Olhar a mesa(pegou o envelope).txt");
+            this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/Sala Flores/Opcoes/2- olhar.txt a mesa(pegou o envelope).txt");
         }else{
-            this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/Sala Flores/Opcoes/2- Olhar a mesa.txt");
+            this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/Sala Flores/Opcoes/2- olhar.txt a mesa.txt");
         }
     }
 

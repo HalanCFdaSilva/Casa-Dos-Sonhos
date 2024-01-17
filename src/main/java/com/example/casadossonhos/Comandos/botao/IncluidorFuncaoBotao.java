@@ -56,7 +56,7 @@ public class IncluidorFuncaoBotao {
     private void ativarEvento(String nomeDoqueAtivar) {
         if(this.checaPrimeiroAdicionar()){
             botao.setOnAction(ActionEvent -> {
-                try {personagem.getEventos().find(nomeDoqueAtivar).ativar();}
+                try {personagem.getAgregadorModificadores().getAgregadorEventos().find(nomeDoqueAtivar).ativar();}
                 catch (Exception e) {throw new RuntimeException(e);}
             });
 
@@ -65,7 +65,7 @@ public class IncluidorFuncaoBotao {
             botao.setOnAction(ActionEvent -> {
                 try {
                     current.handle(ActionEvent);
-                    personagem.getEventos().find(nomeDoqueAtivar).ativar();
+                    personagem.getAgregadorModificadores().getAgregadorEventos().find(nomeDoqueAtivar).ativar();
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
@@ -77,7 +77,7 @@ public class IncluidorFuncaoBotao {
 
         if(this.checaPrimeiroAdicionar()){
             botao.setOnAction(ActionEvent -> {
-                try {personagem.getInteracoes().getInteracao(nomeDoqueAtivar).primeiraInteracao();}
+                try {personagem.getAgregadorModificadores().getAgregadorInteracaoInicial().getInteracao(nomeDoqueAtivar).primeiraInteracao();}
                 catch (Exception e) {throw new RuntimeException(e);}
             });
 
@@ -86,7 +86,7 @@ public class IncluidorFuncaoBotao {
             botao.setOnAction(ActionEvent -> {
                 try {
                     current.handle(ActionEvent);
-                    personagem.getInteracoes().getInteracao(nomeDoqueAtivar).primeiraInteracao();
+                    personagem.getAgregadorModificadores().getAgregadorInteracaoInicial().getInteracao(nomeDoqueAtivar).primeiraInteracao();
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }

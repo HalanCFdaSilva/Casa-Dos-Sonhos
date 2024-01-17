@@ -1,7 +1,9 @@
 package com.example.casadossonhos.Comandos.alerta;
 
 import com.example.casadossonhos.Comandos.alerta.Checador.ChecadorSenhaPatos;
+import com.example.casadossonhos.Jogador.Personagem;
 import com.example.casadossonhos.casa.Cena;
+import com.example.casadossonhos.casa.entrada.hall.segundoAndar.salaPatos.SalaPatos;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
@@ -16,8 +18,8 @@ public class AlertaSenhaPatos extends Alerta{
     private Alert alerta;
     private String senhaDigitada;
 
-    public AlertaSenhaPatos(Cena cena) {
-        super(cena);
+    public AlertaSenhaPatos(Personagem personagem) {
+        super(personagem);
 
         this.botoes = new ArrayList<>();
         this.textos = new ArrayList<>();
@@ -87,7 +89,7 @@ public class AlertaSenhaPatos extends Alerta{
         alerta.showAndWait().ifPresent(buttonType -> {
             if (buttonType == but) {
                 this.salvarSenha();
-                this.checarSenha(this.getCena());
+                this.checarSenha(new SalaPatos(this.getPersonagem()));
                 textos.forEach(label -> label.setText("0"));
 
             }

@@ -1,5 +1,1 @@
-Você abre o espelho e lá dentro encontra uma gázua, você a pega e põe na mochila, entao fecha o espelho.
-
-( segunda interacao)
-Você abre o espelho e não encontra nada lá, então fecha o espelho.
-Deve haver um meio mais perigoso de ir para o mundo invertido.
+Você abre o espelho e lá dentro encontra uma gázua.

@@ -1,12 +1,2 @@
-Você se aproxima do espelho, o qual devido ao vapor ficou embassado, nele se dá para ver escrito o número 2035. Tambem dá para ver a silhueta de um rosto que não parece o seu, de qualquer forma está embassado demais para ver.
-Passando a mão por tras do espelho você percebe que o espelho é um armario a parte.
-
-( retornar banheira cheia)
-Você se aproxima do espelho, o qual devido ao vapor está embassado. Em sua superficie se é possivel ler o numero 2035.
-
-
-
-
-OPCOES
-1- Desembassar o espelho
-2-Abrir Espelho
+Você se aproxima do espelho, o qual devido ao vapor ficou embaçado, nele se dá para ver escrito o número 2035. Também dá para ver a silhueta de um rosto que não parece o seu, de qualquer forma está embaçado demais para ver.
+Passando a mão por trás do espelho você percebe que o espelho é um armário a parte.

@@ -17,7 +17,7 @@ public class ArmarioQuarto extends Cena {
             this.getGuardadorEnderecoTextos().setEnderecoAcoes("FALTA.txt");
             this.getGuardadorEnderecoTextos().setEnderecoTexto("FALTA.txt");
         }else {
-            if (this.getPersonagem().getEventos().find("Sacudiu bola de cristal").isAtivo()){
+            if (this.getPersonagem().getAgregadorModificadores().getAgregadorEventos().find("Sacudiu bola de cristal").isAtivo()){
                 this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/segundo andar/Quarto/Textos/1- Verificar armário.txt");
                 this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/segundo andar/Quarto/Opcoes/1-1- Sacudir o globo de neve.txt");
             }else {
@@ -36,7 +36,7 @@ public class ArmarioQuarto extends Cena {
             botoes.funcaoBotao(new ArmarioQuarto(this.getPersonagem()),
                     "Sacudir o globo de neve");
 
-            botoes.criaAlerta(new QuebrarGloboDeNeve(new ArmarioQuarto(this.getPersonagem())),
+            botoes.criaAlerta(new QuebrarGloboDeNeve(this.getPersonagem()),
                     "Quebrar o globo de neve");
 
             botoes.pegarItem("Globo de neve","guardar o globo de neve").

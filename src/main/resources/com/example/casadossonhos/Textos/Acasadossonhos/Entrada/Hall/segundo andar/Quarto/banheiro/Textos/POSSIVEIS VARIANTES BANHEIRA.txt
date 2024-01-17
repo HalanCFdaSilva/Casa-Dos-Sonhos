@@ -1,4 +1,4 @@
-( sem objeto e vazia) POSSIVEL OPCAO ENCHER BANHEIRA
+( sem objeto e vazia) POSSIVEL OPCAO ENCHER BANHEIRA1- Verificar banheira( cheia).txt
 Você abre a torneira e agua extremamente quente começa a jorrar na banheira formando um vapor que preenche todo o banheiro. A torneira para de despejar agua sozinha quando a agua na banheira atinge uma certa altura.
 
 (sem objeto e cheia)

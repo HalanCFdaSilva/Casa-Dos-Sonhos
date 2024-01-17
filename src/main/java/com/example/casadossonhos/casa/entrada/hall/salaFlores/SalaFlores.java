@@ -14,7 +14,7 @@ public class SalaFlores extends Cena {
     public void guardarEnderecoTexto() {
         this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Flores/Textos/sala flores.txt");
 
-        if (!this.getPersonagem().getInteracoes().getInteracao("SalaPatos").isPrimeiraVez()){
+        if (!this.getPersonagem().getAgregadorModificadores().getAgregadorInteracaoInicial().getInteracao("SalaPatos").isPrimeiraVez()){
             this.getGuardadorEnderecoTextos().setEnderecoAcoes("FALTA.txt");
         }else{
             this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/Sala Flores/Opcoes/sala flores.txt");
@@ -24,14 +24,14 @@ public class SalaFlores extends Cena {
     @Override
     public void aoClicarBotao() {
         super.aoClicarBotao();
-        if (!this.getPersonagem().getInteracoes().getInteracao("SalaPatos").isPrimeiraVez()){
+        if (!this.getPersonagem().getAgregadorModificadores().getAgregadorInteracaoInicial().getInteracao("SalaPatos").isPrimeiraVez()){
 
         }else {
             botoes.funcaoBotao(new VerificarArvore(this.getPersonagem()),
                     "Verificar Arvore");
 
             botoes.funcaoBotao(new OlharMesaSalaFlores(this.getPersonagem()),
-                    "Olhar a mesa");
+                    "olhar.txt a mesa");
 
             botoes.funcaoBotao(new VerificarTotem(this.getPersonagem()),
                     "Verificar o Totêm");

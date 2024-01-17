@@ -1,4 +1,6 @@
-package com.example.casadossonhos.Jogador.modificadoresDeAmbiente.primeiraVez;
+package com.example.casadossonhos.Jogador.modificadoresDeAmbiente.agregadores;
+
+import com.example.casadossonhos.Jogador.modificadoresDeAmbiente.primeiraVez.InteracaoInicial;
 
 import java.util.ArrayList;
 import java.util.List;

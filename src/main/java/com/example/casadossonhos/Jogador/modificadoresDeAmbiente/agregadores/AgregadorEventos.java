@@ -1,4 +1,6 @@
-package com.example.casadossonhos.Jogador.modificadoresDeAmbiente.eventos;
+package com.example.casadossonhos.Jogador.modificadoresDeAmbiente.agregadores;
+
+import com.example.casadossonhos.Jogador.modificadoresDeAmbiente.evento.Evento;
 
 import java.util.ArrayList;
 
@@ -8,7 +10,7 @@ public class AgregadorEventos {
     public AgregadorEventos() {
         this.eventos = new ArrayList<>();
 
-        Evento olharJanela =new Evento("Olhar janela");
+        Evento olharJanela =new Evento("olhar janela");
         this.eventos.add(olharJanela);
 
         Evento vapor =new Evento("Vapor");

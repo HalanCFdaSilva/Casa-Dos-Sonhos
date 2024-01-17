@@ -15,7 +15,7 @@ public class SalaPatos extends Cena {
     @Override
     public void guardarEnderecoTexto() {
 
-        if (this.getPersonagem().getInteracoes().getInteracao("SalaPatosSenha").isPrimeiraVez()){
+        if (this.getPersonagem().getAgregadorModificadores().getAgregadorInteracaoInicial().getInteracao("SalaPatosSenha").isPrimeiraVez()){
             this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/segundo andar/Textos/5-1- Verificar porta com desenho de pato.txt");
             this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/segundo andar/Opcoes/5-1- Verificar porta com desenho de pato.txt");
         }else {
@@ -28,14 +28,14 @@ public class SalaPatos extends Cena {
     @Override
     public void aoClicarBotao() {
         super.aoClicarBotao();
-        if(!this.getPersonagem().getInteracoes().getInteracao("SalaPatosSenha").isPrimeiraVez()){
+        if(!this.getPersonagem().getAgregadorModificadores().getAgregadorInteracaoInicial().getInteracao("SalaPatosSenha").isPrimeiraVez()){
             botoes.funcaoBotao(new VerificarLadoEsquerdo(this.getPersonagem()),
                     "Verificar lado esquerdo");
             botoes.funcaoBotao(new VerificarMeio(this.getPersonagem()), "Verificar o meio");
             botoes.funcaoBotao(new VerificarLadoDireito(this.getPersonagem()),
                     "Verificar o lado direito");
         } else {
-            botoes.criaAlerta(new AlertaSenhaPatos(new SalaPatos(this.getPersonagem())),"Digitar senha");
+            botoes.criaAlerta(new AlertaSenhaPatos(this.getPersonagem()),"Digitar senha");
 
 
         }

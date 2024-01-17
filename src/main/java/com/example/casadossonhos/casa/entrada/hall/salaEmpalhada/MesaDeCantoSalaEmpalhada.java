@@ -17,7 +17,7 @@ public class MesaDeCantoSalaEmpalhada extends Cena {
     @Override
     public void guardarEnderecoTexto() {
         this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Empalhada/Textos/2- Verificar a mesa de canto.txt");
-        this.getGuardadorEnderecoTextos().setEnderecoAcoes("FALTA.txt");
+        this.getGuardadorEnderecoTextos().setEnderecoAcoes();
     }
 
     @Override

@@ -14,6 +14,17 @@ public class Banheiro extends Cena {
 
     @Override
     public void guardarEnderecoTexto() {
+        this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/segundo andar/Quarto/banheiro/Textos/banheiro.txt");
+        this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/segundo andar/Quarto/banheiro/Opcoes/banheiro.txt");
+    }
+
+    @Override
+    public void aoClicarBotao(){
+        super.aoClicarBotao();
+        botoes.funcaoBotao(new Banheira(this.getPersonagem()), "Verificar banheira");
+        botoes.funcaoBotao(new EspelhoBanheiro(this.getPersonagem()), "Olhar espelho");
+        botoes.funcaoBotao(new PiaBanheiro(this.getPersonagem()), "Verificar pia");
+
 
     }
 

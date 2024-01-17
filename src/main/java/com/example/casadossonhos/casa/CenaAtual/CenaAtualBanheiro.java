@@ -14,7 +14,9 @@ public enum CenaAtualBanheiro implements CenaAtual{
     ESPELHO,
     PIA,
     ARMARIO_PIA_BANHEIRO,
-    ARMARIO_ESPELHO_BANHEIRO;
+    ARMARIO_ESPELHO_BANHEIRO,
+    MONOLOGO;
+
 
 
     public Cena cenaAnterior(Personagem personagem) {
@@ -27,6 +29,8 @@ public enum CenaAtualBanheiro implements CenaAtual{
             case ARMARIO_PIA_BANHEIRO: return new PiaBanheiro(personagem);
 
             case ARMARIO_ESPELHO_BANHEIRO: return new EspelhoBanheiro(personagem);
+
+            case MONOLOGO: return new EspelhoBanheiro(personagem);
 
             default: return null;
         }

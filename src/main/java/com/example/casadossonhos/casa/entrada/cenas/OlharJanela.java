@@ -13,7 +13,7 @@ public class OlharJanela extends Cena {
     @Override
     public void start() throws Exception {
         super.start();
-        getPersonagem().getEventos().find("Olhar janela").ativar();
+        getPersonagem().getAgregadorModificadores().getAgregadorEventos().find("olhar janela").ativar();
     }
 
     @Override

@@ -1,8 +1,7 @@
 package com.example.casadossonhos.Jogador;
 
 import com.example.casadossonhos.Jogador.inventario.Inventario;
-import com.example.casadossonhos.Jogador.modificadoresDeAmbiente.eventos.AgregadorEventos;
-import com.example.casadossonhos.Jogador.modificadoresDeAmbiente.primeiraVez.AgregadorInteracaoInicial;
+import com.example.casadossonhos.Jogador.modificadoresDeAmbiente.AgregadorModificadores;
 import com.example.casadossonhos.casa.CenaAtual.CenaAtual;
 import javafx.stage.Stage;
 
@@ -10,8 +9,12 @@ public class Personagem {
 
     private final Inventario inventario;
     private  Integer fichas;
-    private AgregadorEventos eventos;
-    private AgregadorInteracaoInicial interacoes;
+
+    public AgregadorModificadores getAgregadorModificadores() {
+        return agregadorModificadores;
+    }
+
+    private AgregadorModificadores agregadorModificadores;
     private CenaAtual cenaAtual;
 
     private final Stage primaryStage;
@@ -19,8 +22,7 @@ public class Personagem {
     public Personagem(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.inventario = new Inventario();
-        this.eventos = new AgregadorEventos();
-        this.interacoes = new AgregadorInteracaoInicial();
+        this.agregadorModificadores = new AgregadorModificadores();
 
     }
 
@@ -36,12 +38,7 @@ public class Personagem {
         this.cenaAtual = cenaAtual;
     }
 
-    public AgregadorInteracaoInicial getInteracoes() {
-        return interacoes;
-    }
-    public AgregadorEventos getEventos(){
-        return eventos;
-    }
+
     public Inventario getInventario() {
         return inventario;
     }

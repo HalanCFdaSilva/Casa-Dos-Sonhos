@@ -22,4 +22,6 @@ module com.example.casadossonhos {
     opens cssArchives.casa;
     exports com.example.casadossonhos.Comandos.textos;
     opens com.example.casadossonhos.Comandos.textos to javafx.fxml;
+    exports com.example.casadossonhos.Comandos.alerta.Estacoes;
+    opens com.example.casadossonhos.Comandos.alerta.Estacoes to javafx.fxml;
 }

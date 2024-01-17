@@ -1,4 +1,4 @@
-package com.example.casadossonhos.Jogador.modificadoresDeAmbiente.eventos;
+package com.example.casadossonhos.Jogador.modificadoresDeAmbiente.evento;
 
 public class Evento {
     
@@ -20,5 +20,9 @@ public class Evento {
 
     public boolean isAtivo() {
         return ativo;
+    }
+
+    public void setAtivo(boolean ativo) {
+        this.ativo = ativo;
     }
 }

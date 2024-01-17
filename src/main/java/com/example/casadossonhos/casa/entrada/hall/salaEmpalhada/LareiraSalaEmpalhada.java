@@ -14,10 +14,10 @@ public class LareiraSalaEmpalhada extends Cena {
 
     @Override
     public void guardarEnderecoTexto() {
-        if(this.getPersonagem().getEventos().find("Apagou lareira").isAtivo()){
+        if(this.getPersonagem().getAgregadorModificadores().getAgregadorEventos().find("Apagou lareira").isAtivo()){
 
         }else {
-            this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Empalhada/Textos/1- Olhar lareira.txt");
+            this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Empalhada/Textos/1- olhar.txt lareira.txt");
             this.getGuardadorEnderecoTextos().setEnderecoAcoes();
         }
     }

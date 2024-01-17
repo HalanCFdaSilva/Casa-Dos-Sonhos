@@ -28,7 +28,7 @@ public class VerificarLadoDireito extends Cena {
                     funcaoBotao(new VerificarLadoDireito(this.getPersonagem()), "Pegar diario");
 
         }
-        botoes.funcaoBotao(new OlharGavetaSalaPatos(this.getPersonagem()),"Olhar gaveta");
+        botoes.funcaoBotao(new OlharGavetaSalaPatos(this.getPersonagem()),"olhar.txt gaveta");
     }
 
     @Override
