@@ -12,7 +12,7 @@ public class SalaVida extends Cena {
 
     @Override
     public void guardarEnderecoTexto() {
-        if (this.getPersonagem().getAgregadorModificadores().getAgregadorInteracaoInicial().getInteracao("SalaVida").isPrimeiraVez()){
+        if (this.getPersonagem().getAgregadorModificadores().getAgregadorInteracaoInicial().isPrimeiraVez("SalaVida")){
             this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/Sala Empalhada/Porao/sala vida/" +
                     "Textos/sala vida.txt");
 

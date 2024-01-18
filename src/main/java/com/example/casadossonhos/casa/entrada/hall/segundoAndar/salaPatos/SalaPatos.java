@@ -15,7 +15,7 @@ public class SalaPatos extends Cena {
     @Override
     public void guardarEnderecoTexto() {
 
-        if (this.getPersonagem().getAgregadorModificadores().getAgregadorInteracaoInicial().getInteracao("SalaPatosSenha").isPrimeiraVez()){
+        if (this.getPersonagem().getAgregadorModificadores().getAgregadorInteracaoInicial().isPrimeiraVez("SalaPatosSenha")){
             this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/segundo andar/Textos/5-1- Verificar porta com desenho de pato.txt");
             this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/segundo andar/Opcoes/5-1- Verificar porta com desenho de pato.txt");
         }else {
@@ -28,7 +28,7 @@ public class SalaPatos extends Cena {
     @Override
     public void aoClicarBotao() {
         super.aoClicarBotao();
-        if(!this.getPersonagem().getAgregadorModificadores().getAgregadorInteracaoInicial().getInteracao("SalaPatosSenha").isPrimeiraVez()){
+        if(!this.getPersonagem().getAgregadorModificadores().getAgregadorInteracaoInicial().isPrimeiraVez("SalaPatosSenha")){
             botoes.funcaoBotao(new VerificarLadoEsquerdo(this.getPersonagem()),
                     "Verificar lado esquerdo");
             botoes.funcaoBotao(new VerificarMeio(this.getPersonagem()), "Verificar o meio");

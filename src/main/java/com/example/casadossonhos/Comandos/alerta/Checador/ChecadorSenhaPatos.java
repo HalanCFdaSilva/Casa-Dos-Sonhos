@@ -15,7 +15,7 @@ public class ChecadorSenhaPatos {
 
     public void checar() throws Exception {
         if(senhaDigitada.equals("1234")){
-            this.salaPatos.getPersonagem().getAgregadorModificadores().getAgregadorInteracaoInicial().getInteracao("SalaPatosSenha").primeiraInteracao();
+            this.salaPatos.getPersonagem().getAgregadorModificadores().getAgregadorInteracaoInicial().primeiraInteracao("SalaPatosSenha");
             this.salaPatos.start();
         }
         if (senhaDigitada.equals("0451")){

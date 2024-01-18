@@ -1,12 +1,11 @@
 package com.example.casadossonhos.Jogador.modificadoresDeAmbiente.agregadores;
 
-import com.example.casadossonhos.Jogador.modificadoresDeAmbiente.primeiraVez.InteracaoInicial;
+import com.example.casadossonhos.Jogador.modificadoresDeAmbiente.evento.Evento;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class AgregadorInteracaoInicial {
-    ArrayList <InteracaoInicial> interacoes;
+    ArrayList <Evento> interacoes;
 
     public AgregadorInteracaoInicial() {
         this.interacoes = new ArrayList<>();
@@ -14,7 +13,8 @@ public class AgregadorInteracaoInicial {
         ArrayList<String> nomesCenas = this.nomesCenas();
 
         nomesCenas.forEach(nome -> {
-            InteracaoInicial interacaoInicial = new InteracaoInicial(nome);
+            Evento interacaoInicial = new Evento(nome);
+            interacaoInicial.setAtivo(true);
             this.interacoes.add(interacaoInicial);
         });
     }
@@ -32,13 +32,28 @@ public class AgregadorInteracaoInicial {
         return nomesCenas;
     }
 
-    public InteracaoInicial getInteracao(String nomeCena){
-        InteracaoInicial interacaoInicial = null;
-        for (InteracaoInicial interacao : this.interacoes){
-            if (interacao.getNomeCena().equals(nomeCena)){
-                interacaoInicial = interacao;
+   public boolean isPrimeiraVez(String nomeCena){
+        boolean achouInteracao = false;
+        boolean primeiraVez = false;
+        for (Evento interacaoInicial: this.interacoes){
+            if(interacaoInicial.getNomeEvento().equals(nomeCena)){
+                primeiraVez = interacaoInicial.isAtivo();
+                achouInteracao = true;
             }
         }
-        return interacaoInicial;
-    }
+
+        if (!achouInteracao){
+            System.out.println("não achou evento");
+        }
+       return primeiraVez;
+   }
+
+   public void primeiraInteracao(String nomeCena){
+           this.interacoes.forEach(interacao -> {
+               if (interacao.getNomeEvento().equals(nomeCena)){
+                   interacao.setAtivo(false);
+               }
+           });
+
+   }
 }

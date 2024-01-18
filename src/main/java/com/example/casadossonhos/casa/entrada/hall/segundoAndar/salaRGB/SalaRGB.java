@@ -14,7 +14,7 @@ public class SalaRGB extends Cena {
 
     @Override
     public void guardarEnderecoTexto() {
-        if (this.getPersonagem().getAgregadorModificadores().getAgregadorInteracaoInicial().getInteracao("SalaRGB").isPrimeiraVez()){
+        if (this.getPersonagem().getAgregadorModificadores().getAgregadorInteracaoInicial().isPrimeiraVez("SalaRGB")){
             this.getGuardadorEnderecoTextos().setEnderecoAcoes("Hall/segundo andar/Opcoes/5-3- Verificar a porta com leds.txt");
             this.getGuardadorEnderecoTextos().setEnderecoTexto("Hall/segundo andar/Textos/5-3- Verificar a porta com leds.txt");
         }else {
@@ -26,7 +26,7 @@ public class SalaRGB extends Cena {
     @Override
     public void aoClicarBotao() {
         super.aoClicarBotao();
-        if(this.getPersonagem().getAgregadorModificadores().getAgregadorInteracaoInicial().getInteracao("SalaRGB").isPrimeiraVez()){
+        if(this.getPersonagem().getAgregadorModificadores().getAgregadorInteracaoInicial().isPrimeiraVez("SalaRGB")){
 
             botoes.entrou("SalaRGB","ENTRAR( Pensando porque eu estou aqui)").
                     funcaoBotao(new SalaRGB(this.getPersonagem()),

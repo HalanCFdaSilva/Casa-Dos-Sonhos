@@ -33,7 +33,7 @@ public class ArmarioQuarto extends Cena {
         if (this.getPersonagem().getInventario().isPegouItem("Globo de neve")){
 
         }else {
-            botoes.funcaoBotao(new ArmarioQuarto(this.getPersonagem()),
+            botoes.funcaoBotao(new SacudirGloboNeve(this.getPersonagem()),
                     "Sacudir o globo de neve");
 
             botoes.criaAlerta(new QuebrarGloboDeNeve(this.getPersonagem()),

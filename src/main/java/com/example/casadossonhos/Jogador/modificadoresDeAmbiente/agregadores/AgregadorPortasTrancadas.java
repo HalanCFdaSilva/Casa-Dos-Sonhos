@@ -1,41 +1,60 @@
 package com.example.casadossonhos.Jogador.modificadoresDeAmbiente.agregadores;
 
-import com.example.casadossonhos.Jogador.modificadoresDeAmbiente.portaTrancada.PortaTrancada;
-
+import com.example.casadossonhos.Jogador.modificadoresDeAmbiente.evento.Evento;
 import java.util.ArrayList;
-import java.util.concurrent.atomic.AtomicReference;
+
 
 public class AgregadorPortasTrancadas {
 
-    ArrayList<PortaTrancada> portasTrancadas;
+    ArrayList<Evento> portasTrancadas;
 
     public AgregadorPortasTrancadas() {
 
         this.portasTrancadas = new ArrayList<>();
 
-        ArrayList<String> nomesSalas = new ArrayList<>();
-        nomesSalas.add("Sala Vida");
-        nomesSalas.add("Porao");
-        nomesSalas.add("Sala Flores");
+        ArrayList<String> nomesSalas = this.nomesPortas();
+
 
         nomesSalas.forEach(nomeSala -> {
-            PortaTrancada portaTrancada = new PortaTrancada(nomeSala);
+            Evento portaTrancada = new Evento(nomeSala);
             this.portasTrancadas.add(portaTrancada);
 
         });
     }
 
-    public PortaTrancada acharPorta(String nomeSalaProcurada){
-        AtomicReference<PortaTrancada> portaAchada = new AtomicReference<>(new PortaTrancada("sem nome"));
+    private ArrayList<String> nomesPortas(){
+        ArrayList<String> nomesSalas = new ArrayList<>();
+        nomesSalas.add("Sala Vida");
+        nomesSalas.add("Porao");
+        nomesSalas.add("Sala Flores");
 
-        this.portasTrancadas.forEach(portaTrancada -> {
-            if (portaTrancada.confirmarPorta(nomeSalaProcurada)){
-                portaAchada.set(portaTrancada);
+        return nomesSalas;
+    }
+
+    public boolean isDestrancada(String nomeCena){
+
+        Boolean destrancada= null;
+        for (Evento evento : this.portasTrancadas){
+            if (evento.getNomeEvento().equals(nomeCena)){
+                destrancada = evento.isAtivo();
+                break;
             }
-        });
+        }
+        if (destrancada == null){
+            System.out.println("não achou cena");
+        }
+        return destrancada.booleanValue();
+    }
 
-        return portaAchada.get();
+    public void destrancar(String nomeCena){
 
+        for (Evento evento : this.portasTrancadas){
+            if (evento.getNomeEvento().equals(nomeCena)){
+
+                evento.setAtivo(true);
+                break;
+            }
+        }
 
     }
 }

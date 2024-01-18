@@ -1,4 +1,4 @@
-1- Quebrar o globo de neve
-2- Guardar o globo de neve
-3- Deixar o globo d3 neve
-4- sacudir novamente o globo de neve
+Quebrar o globo de neve
+Guardar o globo de neve
+Deixar o globo de neve
+sacudir novamente o globo de neve

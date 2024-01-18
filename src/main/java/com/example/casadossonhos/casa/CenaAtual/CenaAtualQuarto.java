@@ -9,7 +9,8 @@ import com.example.casadossonhos.casa.entrada.hall.segundoAndar.quarto.Quarto;
 public enum CenaAtualQuarto implements CenaAtual {
     ARMARIO_QUARTO,
     QUARTO,
-    QUEBRAR_GLOBO_DE_NEVE;
+    QUEBRAR_GLOBO_DE_NEVE,
+    SACUDIR_GLOBO_DE_NEVE;
 
     @Override
     public Cena cenaAnterior(Personagem personagem) {
